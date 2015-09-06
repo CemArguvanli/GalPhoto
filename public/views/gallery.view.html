@@ -1,0 +1,13 @@
+<div ng-controller="GalleryCtrl">
+    <h1>Most Popular Photos</h1>
+    <div class="row gallery">
+        <div class="col-md-3" ng-repeat="img in images">
+            <a ng-click="openLightBoxModal($index)">
+                <img class="main" ng-src="{{ img.images.low_resolution.url }}" alt="">
+            </a>
+            <div class="imgInfo">
+                <img class="avatar img-circle" ng-src="{{img.user.profile_picture}}" alt=""> Posted By: {{img.user.username}}
+            </div>
+        </div>
+    </div>
+</div>
